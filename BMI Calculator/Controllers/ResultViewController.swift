@@ -9,7 +9,9 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    var bmiValue = " "
+    var bmiValue: String?
+    var advice: String?
+    var color : UIColor?
 
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var bmiLabel: UILabel!
@@ -19,6 +21,9 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         bmiLabel.text = bmiValue
+        adviceLabel.text = advice
+//        for changing the background color
+        view.backgroundColor = color
     }
     
     @IBAction func recalculateBmi(_ sender: UIButton) {
